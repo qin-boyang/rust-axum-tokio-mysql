@@ -4,3 +4,14 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+axum = "0.8.9"
+tokio = {version = "1.52.2", features = ["macros", "rt-multi-thread"]}
+serde = { version = "1.0.228", features = ["derive"] }
+
+[dev-dependencies]
+reqwest = { version = "0.13.3", features = ["json"] }
+
+[[test]]
+name = "main_test"
+path = "test/main_test.rs"
+harness = true
